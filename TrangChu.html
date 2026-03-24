@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer - N9 | Gaming Gear & PC Components</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/TrangChu.css">
+    
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-container"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="logo-text">Computer - N9</div>
+                </a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#" class="nav-item active">Trang chủ</a></li>
+                        <li class="nav-item">
+                            Danh mục
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item"><i class="fas fa-headphones"></i> Tai nghe Gaming</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fas fa-mouse"></i> Chuột chuyên game</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fas fa-keyboard"></i> Bàn phím cơ</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fas fa-volume-up"></i> Loa & Tai nghe</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fas fa-tv"></i> Màn hình Gaming</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fas fa-desktop"></i> PC Gaming</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fas fa-laptop"></i> Laptop Gaming</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="fas fa-microchip"></i> Linh kiện</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="nav-item">Khuyến mãi</a></li>
+                        <li><a href="#" class="nav-item">Gaming Gear</a></li>
+                       
+                    </ul>
+                </nav>
+                
+                <div class="header-icons">
+                    <div class="icon-btn" id="notification-btn">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="icon-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">5</span>
+                    </div>
+                    <div class="icon-btn" id="user-btn">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-container">
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm gaming, linh kiện PC...">
+                    <button class="search-btn"><i class="fas fa-search"></i> Tìm kiếm</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Slider Section -->
+            <section class="slider">
+                <div class="slider-container">
+                    <div class="slide slide1 active">
+                        <div class="slide-content">
+                            <h2>ĐẠI TIỆC GAMING</h2>
+                            <p>Giảm giá SỐC lên đến 50% cho toàn bộ phụ kiện gaming. Nâng cấp setup của bạn ngay hôm nay!</p>
+                            <a href="#" class="btn">MUA NGAY <i class="fas fa-bolt"></i></a>
+                        </div>
+                        <div class="slide-image">
+                            <i class="fas fa-headset" style="font-size: 200px; color: var(--neon-purple);"></i>
+                        </div>
+                    </div>
+                    <div class="slide slide2">
+                        <div class="slide-content">
+                            <h2>PC GAMING SIÊU CẤP</h2>
+                            <p>Trải nghiệm gaming đỉnh cao với cấu hình RTX 4090, CPU Intel i9. Mượt mà mọi tựa game AAA.</p>
+                            <a href="#" class="btn">TÙY CHỈNH NGAY <i class="fas fa-cogs"></i></a>
+                        </div>
+                        <div class="slide-image">
+                            <i class="fas fa-desktop" style="font-size: 200px; color: var(--neon-blue);"></i>
+                        </div>
+                    </div>
+                    <div class="slide slide3">
+                        <div class="slide-content">
+                            <h2>BÀN PHÍM CƠ RGB</h2>
+                            <p>Bàn phím cơ switch Blue, Red, Brown. Hiệu ứng RGB lung linh, cảm giác gõ tuyệt đỉnh.</p>
+                            <a href="#" class="btn">KHÁM PHÁ <i class="fas fa-keyboard"></i></a>
+                        </div>
+                        <div class="slide-image">
+                            <i class="fas fa-keyboard" style="font-size: 200px; color: var(--neon-pink);"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <div class="slider-dot active" data-slide="0"></div>
+                        <div class="slider-dot" data-slide="1"></div>
+                        <div class="slider-dot" data-slide="2"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Filter Section -->
+            <section class="filter-section">
+                <h3 class="filter-title"><i class="fas fa-filter"></i> LỌC THEO MỤC ĐÍCH</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">TẤT CẢ</button>
+                    <button class="filter-btn" data-filter="gaming"><i class="fas fa-gamepad"></i> GAMING</button>
+                    <button class="filter-btn" data-filter="streaming"><i class="fas fa-video"></i> STREAMING</button>
+                    <button class="filter-btn" data-filter="graphic"><i class="fas fa-paint-brush"></i> ĐỒ HỌA</button>
+                    <button class="filter-btn" data-filter="study"><i class="fas fa-graduation-cap"></i> HỌC TẬP</button>
+                    <button class="filter-btn" data-filter="price-asc"><i class="fas fa-arrow-up"></i> GIÁ TĂNG</button>
+                    <button class="filter-btn" data-filter="price-desc"><i class="fas fa-arrow-down"></i> GIÁ GIẢM</button>
+                </div>
+            </section>
+            
+            <!-- Products Section -->
+            <section class="products-section">
+                <h2 class="section-title"><i class="fas fa-bolt"></i> SẢN PHẨM NỔI BẬT</h2>
+                <div class="products-grid" id="products-grid">
+                    <!-- Product cards will be generated by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Computer - N9 Gaming</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Thế giới gaming gear và linh kiện PC hàng đầu Việt Nam. Chúng tôi cam kết mang đến trải nghiệm gaming đỉnh cao nhất.</p>
+                    <div class="social-links">
+                        <a href="#" class="neon-text" style="color: var(--neon-blue);"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="neon-text" style="color: var(--neon-purple);"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="neon-text" style="color: var(--neon-pink);"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="neon-text" style="color: var(--neon-green);"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="neon-text" style="color: var(--neon-yellow);"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên hệ</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-text">
+                                <strong>Địa chỉ cửa hàng:</strong>
+                                Số 504 Đại lộ Bình Dương, P. Phú Lợi, Thành phố Hồ Chí Minh
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-text">
+                                <strong>Hotline:</strong>
+                                0789 269 219<br>
+                                0274 6 511 756<br>
+                                0274 3 822 058
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-text">
+                                <strong>Email:</strong>
+                                gaming@computern9.vn
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Sản phẩm gaming</a></li>
+                        <li><a href="#">PC Build & Tư vấn</a></li>
+                        <li><a href="#">Khuyến mãi đặc biệt</a></li>
+                        <li><a href="#">Tin tức gaming</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Đăng ký nhận tin</h3>
+                    <div class="newsletter">
+                        <p>Nhận thông tin khuyến mãi HOT nhất và tin tức gaming mới nhất</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Email của bạn" required>
+                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                        <p style="font-size: 13px;">Chúng tôi cam kết không spam!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Computer - N9 Gaming. Tất cả các quyền được bảo lưu.</p>
+                <p>Thiết kế bởi Team N9 Gaming với <i class="fas fa-heart" style="color: var(--neon-pink);"></i></p>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fas fa-credit-card" title="Thẻ tín dụng"></i>
+                    <i class="fas fa-money-bill-wave" title="Tiền mặt"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="JS/TrangChu.js"></script>
+</body>
+</html>

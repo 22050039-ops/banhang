@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer - N9 | Danh mục sản phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/DanhMuc.css">
+</head>
+<body>
+    <div id="particles-container"></div>
+    
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="TrangChu.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="logo-text">Computer - N9</div>
+                </a>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="TrangChu.html" class="nav-item">Trang chủ</a></li>
+                        <li class="nav-item active">
+                            Danh mục
+                            <ul class="dropdown-menu">
+                                <li><a href="danhmuc.html?type=pc">PC Gaming</a></li>
+                                <li><a href="danhmuc.html?type=laptop">Laptop Gaming</a></li>
+                                <li><a href="danhmuc.html?type=keyboard">Bàn phím</a></li>
+                                <li><a href="danhmuc.html?type=mouse">Chuột Gaming</a></li>
+                                <li><a href="danhmuc.html?type=monitor">Màn hình</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="nav-item">Khuyến mãi</a></li>
+                        <li><a href="#" class="nav-item">Tin tức</a></li>
+                        <li><a href="#" class="nav-item">Liên hệ</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-icons">
+                    <div class="icon-item search-trigger">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="icon-item cart-icon" onclick="location.href='GioHang.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge">5</span>
+                    </div>
+                    <div class="icon-item user-icon" onclick="location.href='DangNhap.html'">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container content-wrapper">
+        <section class="category-banner">
+            <div class="banner-slide">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1300&q=80" alt="Promo">
+                <div class="banner-text">
+                    <span class="tag">EXCLUSIVE</span>
+                    <h2>DANH MỤC SẢN PHẨM</h2>
+                    <p>Khám phá hệ sinh thái Gaming Gear đỉnh cao tại Computer N9</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo-section">
+            <div class="section-header">
+                <h3 class="section-title"><i class="fas fa-bolt"></i> ĐANG KHUYẾN MÃI</h3>
+                <div class="slide-nav">
+                    <button id="slide-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button id="slide-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="promo-wrapper" id="promo-list">
+                </div>
+        </section>
+
+        <section class="main-products-layout">
+            <aside class="filter-sidebar">
+                <div class="filter-box">
+                    <h4 class="filter-title"><i class="fas fa-filter"></i> BỘ LỌC</h4>
+                    
+                    <div class="filter-group">
+                        <h5>Loại sản phẩm</h5>
+                        <select id="filter-type" class="filter-select">
+                            <option value="all">Tất cả</option>
+                            <option value="pc">PC Gaming</option>
+                            <option value="laptop">Laptop Gaming</option>
+                            <option value="keyboard">Bàn phím</option>
+                            <option value="mouse">Chuột Gaming</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <h5>Thương hiệu</h5>
+                        <div class="check-list">
+                            <label class="check-item">ASUS <input type="checkbox" class="brand-f" value="asus"><span></span></label>
+                            <label class="check-item">RAZER <input type="checkbox" class="brand-f" value="razer"><span></span></label>
+                            <label class="check-item">LOGITECH <input type="checkbox" class="brand-f" value="logitech"><span></span></label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h5>Khoảng giá</h5>
+                        <select id="filter-price" class="filter-select">
+                            <option value="all">Mọi mức giá</option>
+                            <option value="0-10">Dưới 10 triệu</option>
+                            <option value="10-30">10 - 30 triệu</option>
+                            <option value="30-999">Trên 30 triệu</option>
+                        </select>
+                    </div>
+
+                    <div id="extra-filters" class="filter-group extra-box" style="display: none;">
+                        <h5>Tính năng riêng</h5>
+                        <div class="check-list" id="extra-check-list">
+                            </div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="products-container">
+                <div class="display-options">
+                    <p id="result-text">Đang tải sản phẩm...</p>
+                    <div class="sort-box">
+                        <span>Sắp xếp:</span>
+                        <select id="sort-order">
+                            <option value="new">Mới nhất</option>
+                            <option value="low">Giá thấp - cao</option>
+                            <option value="high">Giá cao - thấp</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="main-grid">
+                    </div>
+
+                <div class="pagination" id="pagination-box"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="#" class="logo">
+                        <div class="logo-icon"><i class="fas fa-gamepad"></i></div>
+                        <div class="logo-text">Computer - N9</div>
+                    </a>
+                    <p>Hệ thống cung cấp linh kiện máy tính và Gaming Gear hàng đầu Việt Nam. Tận hưởng trải nghiệm gaming đỉnh cao cùng chúng tôi.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Sản phẩm</h3>
+                    <ul>
+                        <li><a href="#">PC Gaming</a></li>
+                        <li><a href="#">Laptop Gaming</a></li>
+                        <li><a href="#">Linh kiện PC</a></li>
+                        <li><a href="#">Gaming Gear</a></li>
+                        <li><a href="#">Màn hình</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Hướng dẫn thanh toán</a></li>
+                        <li><a href="#">Vận chuyển & Giao hàng</a></li>
+                        <li><a href="#">Trả góp 0%</a></li>
+                        <li><a href="#">Liên hệ hỗ trợ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Đăng ký nhận tin</h3>
+                    <div class="newsletter">
+                        <p>Nhận thông tin khuyến mãi HOT nhất và tin tức gaming mới nhất</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Email của bạn" required>
+                            <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Computer - N9 Gaming. Tất cả các quyền được bảo lưu.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/DanhMuc.js"></script>
+</body>
+</html>

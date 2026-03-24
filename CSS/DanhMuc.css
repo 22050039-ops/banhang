@@ -1,0 +1,263 @@
+:root {
+    --neon-blue: #00f3ff;
+    --neon-pink: #ff2a6d;
+    --dark-bg: #0a0a16;
+    --card-bg: #13132e;
+    --text-sec: #b8b8d1;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    overflow-x: hidden;
+}
+
+#particles-container { 
+    position: fixed;
+     top: 0; 
+     left: 0; 
+     width: 100%; 
+     height: 100%; 
+     z-index: -1; }
+.container { 
+    max-width: 1300px; 
+    margin: 0 auto;
+     padding: 0 20px; }
+
+/* HEADER & FOOTER CSS (Bưng từ TrangChu sang) */
+header {
+     background: rgba(10, 10, 22, 0.95);
+      padding: 15px 0; position: sticky;
+       top: 0; z-index: 1000; 
+       border-bottom: 1px solid rgba(0, 243, 255, 0.2); 
+       backdrop-filter: blur(10px); }
+.header-top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; }
+.logo {
+     display: flex; 
+     align-items: center;
+     text-decoration: none;
+      gap: 10px; }
+.logo-icon { 
+    color: var(--neon-blue); 
+    font-size: 24px; 
+    text-shadow: 0 0 10px var(--neon-blue); }
+.logo-text { 
+    font-family: 'Orbitron'; 
+    color: white; 
+    font-weight: 900; 
+    font-size: 20px; }
+.nav-menu { 
+    display: flex; 
+    list-style: none; 
+    gap: 25px; }
+.nav-item { 
+    text-decoration: none; 
+    color: white; font-weight: 500; 
+    transition: 0.3s; position: relative; }
+.nav-item:hover, .nav-item.active { 
+    color: var(--neon-blue); 
+    text-shadow: 0 0 8px var(--neon-blue); }
+.dropdown-menu { 
+    position: absolute; 
+    top: 100%; left: 0; background: var(--card-bg); 
+    width: 200px; padding: 15px; 
+    border-radius: 8px; 
+    border: 1px solid var(--neon-blue); 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: 0.3s; 
+    list-style: none; }
+.nav-item:hover .dropdown-menu { 
+    opacity: 1; 
+    visibility: visible; }
+.dropdown-menu a { 
+    color: white; 
+    text-decoration: none; 
+    padding: 8px 0; 
+    display: block; 
+    font-size: 14px; }
+.dropdown-menu a:hover { 
+    color: var(--neon-blue); }
+.header-icons { 
+    display: flex;
+     gap: 20px; 
+     font-size: 18px; }
+.icon-item { 
+    cursor: pointer; 
+    position: relative; 
+    transition: 0.3s; }
+.icon-item:hover { 
+    color: var(--neon-blue);
+     transform: scale(1.1); }
+.cart-badge { 
+    position: absolute; 
+    top: -8px; right: -12px; 
+    background: var(--neon-pink); 
+    font-size: 10px; 
+    padding: 2px 6px;
+     border-radius: 50%; }
+
+/* CATEGORY SPECIFIC CONTENT */
+.content-wrapper {
+     padding-top: 30px; }
+.category-banner { 
+    height: 350px;
+     border-radius: 20px; 
+     overflow: hidden; 
+     border: 1px solid rgba(0,243,255,0.3);
+     position: relative; 
+     margin-bottom: 40px; }
+.banner-slide img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; }
+.banner-text { 
+    position: absolute; 
+    bottom: 40px; 
+    left: 40px; 
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8); }
+.banner-text .tag { 
+    background: var(--neon-blue); 
+    color: black; 
+    padding: 4px 12px; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    font-size: 12px; }
+.banner-text h2 { 
+    font-family: 'Orbitron'; 
+    font-size: 3rem; 
+    margin: 10px 0; }
+
+/* FLASH SALE SLIDE */
+.section-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+     margin-bottom: 20px; }
+.section-title { 
+    font-family: 'Orbitron'; 
+    color: var(--neon-blue);
+     display: flex; 
+     align-items: center; 
+     gap: 10px; }
+.promo-wrapper { 
+    display: flex; 
+    overflow-x: auto; 
+    gap: 20px; 
+    padding: 10px 5px 20px; 
+    scroll-behavior: smooth; }
+.promo-wrapper::-webkit-scrollbar { 
+    height: 4px; }
+.promo-wrapper::-webkit-scrollbar-thumb { 
+    background: var(--neon-blue);
+     border-radius: 10px; }
+
+/* MAIN LAYOUT */
+.main-products-layout { display: grid; grid-template-columns: 280px 1fr; gap: 30px; margin-top: 50px; }
+.filter-sidebar { background: var(--card-bg); border-radius: 15px; padding: 20px; border: 1px solid rgba(255,255,255,0.05); height: fit-content; position: sticky; top: 100px; }
+.filter-title { font-family: 'Orbitron'; color: var(--neon-blue); margin-bottom: 20px; border-bottom: 1px solid rgba(0,243,255,0.2); padding-bottom: 10px; }
+.filter-group { margin-bottom: 25px; }
+.filter-group h5 { margin-bottom: 12px; font-size: 0.9rem; color: var(--text-sec); }
+.filter-select { width: 100%; background: #0a0a1c; color: white; border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 6px; outline: none; }
+.check-list { display: grid; gap: 10px; }
+.check-item { display: flex; justify-content: space-between; align-items: center; font-size: 14px; cursor: pointer; }
+
+/* PRODUCTS GRID */
+.display-options { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+
+.product-card { 
+    background: var(--card-bg); border-radius: 12px; padding: 20px; transition: 0.4s; 
+    border: 1px solid rgba(255,255,255,0.05); cursor: pointer; text-align: center;
+}
+.product-card:hover { transform: translateY(-8px); border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0,243,255,0.1); }
+.product-card i { color: var(--neon-blue); margin-bottom: 20px; }
+.product-name { font-size: 0.95rem; margin-bottom: 10px; height: 40px; overflow: hidden; }
+.price { color: var(--neon-blue); font-weight: bold; font-size: 1.1rem; }
+
+.pagination { display: flex; justify-content: center; gap: 10px; margin: 50px 0; }
+.page-btn { padding: 8px 15px; background: var(--card-bg); border: 1px solid var(--neon-blue); color: white; cursor: pointer; border-radius: 4px; }
+.page-btn.active { background: var(--neon-blue); color: black; font-weight: bold; }
+
+/* FOOTER */
+footer { 
+    background: #050510; 
+    padding: 60px 0 20px; 
+    border-top: 1px solid rgba(0,243,255,0.1); 
+    margin-top: 80px; 
+    }
+.footer-content { 
+    display: grid; 
+    grid-template-columns: 2fr 1fr 1fr 2fr; 
+    gap: 40px; 
+    }
+.footer-column h3 { 
+    font-family: 'Orbitron'; 
+    color: var(--neon-blue); 
+    margin-bottom: 20px; 
+    font-size: 1.1rem;
+    }
+.footer-column p { 
+    color: var(--text-sec); 
+    line-height: 1.6; 
+    font-size: 14px; 
+    }
+.footer-column ul { 
+    list-style: none;
+ }
+.footer-column ul li { 
+    margin-bottom: 10px; 
+}
+.footer-column ul a { 
+    color: var(--text-sec); 
+    text-decoration: none; 
+    transition: 0.3s; font-size: 14px; 
+}
+.footer-column ul a:hover { 
+    color: var(--neon-blue); 
+    padding-left: 5px; 
+}
+.social-links { 
+    display: flex; gap: 15px; 
+    margin-top: 20px; 
+}
+.social-links a { 
+    color: white; 
+    font-size: 18px; 
+    transition: 0.3s; 
+}
+.social-links a:hover { 
+    color: var(--neon-blue); 
+}
+.newsletter-form { 
+    display: flex; margin-top: 15px;
+ }
+.newsletter-input {
+     flex: 1; padding: 10px; 
+     background: #1a1a3a; border: none; 
+     color: white; border-radius: 4px 0 0 4px; 
+    }
+.newsletter-btn { 
+    padding: 10px 20px; 
+    background: var(--neon-blue); 
+    border: none; cursor: pointer; 
+    border-radius: 0 4px 4px 0;
+}
+.footer-bottom { 
+    margin-top: 50px; 
+    padding-top: 20px; 
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; justify-content: space-between;
+    align-items: center; 
+    color: var(--text-sec); font-size: 13px; 
+}
+.payment-methods { 
+    display: flex; 
+    gap: 15px;
+    font-size: 20px; 
+}
